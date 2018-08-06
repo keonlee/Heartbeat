@@ -83,9 +83,10 @@ namespace HelloAnt
                 //ANT Part
                  byte USER_RADIOFREQ = 57; // RF Frequency + 2400 MHz
                 //ANTPLUS KEY
-                byte[] USER_NETWORK_KEY = { 0xB9, 0xA5, 0x21, 0xFB, 0xBD, 0x72, 0xC3, 0x45 }; // key
+                 byte[] USER_NETWORK_KEY = { 0xB9, 0xA5, 0x21, 0xFB, 0xBD, 0x72, 0xC3, 0x45 }; // key
                  byte USER_NETWORK_NUM = 0;
-                 ANT_Device USB_Dongle;
+                //Use USB dongle to connect ANT+ device
+                ANT_Device USB_Dongle;
                 USB_Dongle = new ANT_Device();
                 USB_Dongle.ResetSystem();
                 USB_Dongle.setNetworkKey(USER_NETWORK_NUM, USER_NETWORK_KEY);
